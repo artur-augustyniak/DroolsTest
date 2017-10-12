@@ -1,0 +1,22 @@
+import droolstest.facts.Product;
+
+rule "amount more then 200"
+when
+p : Product( amount >= 200)
+then
+p.setPrice(1.2f);
+end
+
+rule "amount more then 100"
+when
+p:Product(amount >= 100)
+then
+p.setPrice(1.3f);
+end
+
+rule "amount less then 100"
+when
+p:Product(amount < 100)
+then
+p.setPrice(0.3f);
+end

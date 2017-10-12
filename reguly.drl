@@ -1,0 +1,21 @@
+package droolstest.facts;
+import droolstest.facts.*;
+global java.util.List myList; 
+rule "amount more then 200"
+	when
+		p : Product( amount >= 200)
+	then 
+		p.setPrice(1.2f);
+		myList.add("more then 200");
+end
+
+rule "amount more then 100"
+	when
+		p:Product(amount >= 100)
+	then
+		p.setPrice(1.3f);
+		myList.add("more then 100");
+end
+ 
+
+ 
